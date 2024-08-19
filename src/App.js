@@ -25,11 +25,11 @@ function App() {
   return (
     <>
       <div className="h-96 w-96 bg-gray-800 rounded-lg shadow-lg flex flex-col items-center">
-        <h1 className="text-white text-4xl font-semibold tracking-wide">
-          Video Auto Pause
+        <h1 className="text-white mt-3 text-4xl font-semibold tracking-wide">
+          Play Pause Assist
         </h1>
         <div className="flex items-center mt-8 justify-center w-auto">
-          <label className="text-white mr-2">Auto Pause</label>
+          <label className="text-white text-2xl mr-2">Auto Play/Pause</label>
           <label className="inline-flex items-center cursor-pointer">
             <input
               type="checkbox"
