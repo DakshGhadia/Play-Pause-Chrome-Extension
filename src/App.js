@@ -15,6 +15,9 @@ function App() {
       chrome.storage.local.set({ checked: newChecked }).then(() => {
         console.log("Value is set");
       });
+
+      chrome.runtime.sendMessage({ isChecked: newChecked });
+
       return newChecked;
     });
   }
