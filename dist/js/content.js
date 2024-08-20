@@ -20,20 +20,12 @@ function findMainVideo() {
       mainVideo = videos[0];
     }
   }
-
-  if (!mainVideo) {
-    mainVideo = document.querySelector(
-      "video, .vjs-tech, .html5-main-video, iframe"
-    );
-  }
-
   return mainVideo;
 }
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   const video = findMainVideo();
-
-  if (video) {
+  if (video != undefined && video != null) {
     if (message.action === "pauseVideo" && !video.paused) {
       video.pause();
     }

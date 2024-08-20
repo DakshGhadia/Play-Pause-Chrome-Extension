@@ -12,9 +12,7 @@ function App() {
   function toggleChecked() {
     setChecked((prevChecked) => {
       const newChecked = !prevChecked;
-      chrome.storage.local.set({ checked: newChecked }).then(() => {
-        console.log("Value is set");
-      });
+      chrome.storage.local.set({ checked: newChecked });
 
       chrome.runtime.sendMessage({ isChecked: newChecked });
 
